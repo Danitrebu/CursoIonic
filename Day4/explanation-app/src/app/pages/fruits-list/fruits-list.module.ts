@@ -6,8 +6,12 @@ import { RouterModule } from '@angular/router';
 
 import { ComponentsModule } from '../../components/components.module';
 import { FruitsListPage } from './fruits-list.page';
+import { FruitsService } from '../../services/fruits.service';
 
 @NgModule({
+  declarations: [
+    FruitsListPage
+  ],
   imports: [
     CommonModule,
     ComponentsModule,
@@ -20,6 +24,8 @@ import { FruitsListPage } from './fruits-list.page';
       }
     ])
   ],
-  declarations: [FruitsListPage]
+  providers: [
+    FruitsService
+  ]
 })
 export class FruitsListPageModule {}
