@@ -7,9 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ExpandableContentComponent {
 
-  @Input() title: string;
+  @Input()
+  public title: string;
 
-  @Output() change = new EventEmitter<boolean>();
+  @Output()
+  public change = new EventEmitter<boolean>();
 
   public isExpanded = false;
 
@@ -19,7 +21,7 @@ export class ExpandableContentComponent {
 
   }
 
-  public togggleExpand(): void {
+  public toggleExpand(): void {
 
     this.isExpanded = !this.isExpanded;
 
