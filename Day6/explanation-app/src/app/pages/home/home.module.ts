@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
-import { ReactiveFormPage } from './reactive-form.page';
+import { HomePage } from './home.page';
 
 @NgModule({
   imports: [
@@ -13,9 +13,11 @@ import { ReactiveFormPage } from './reactive-form.page';
     IonicModule,
     RouterModule.forChild([{
       path: '',
-      component: ReactiveFormPage
+      component: HomePage
     }])
   ],
-  declarations: [ReactiveFormPage]
+  declarations: [
+    HomePage
+  ]
 })
-export class ReactiveFormPageModule {}
+export class HomePageModule {}

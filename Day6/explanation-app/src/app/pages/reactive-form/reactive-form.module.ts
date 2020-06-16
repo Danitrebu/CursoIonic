@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ReactiveFormPage } from './reactive-form.page';
+import { UserService } from '../../services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -14,8 +16,15 @@ import { ReactiveFormPage } from './reactive-form.page';
     RouterModule.forChild([{
       path: '',
       component: ReactiveFormPage
-    }])
+    }]),
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  declarations: [ReactiveFormPage]
+  declarations: [
+    ReactiveFormPage
+  ],
+  providers: [
+    UserService
+  ]
 })
 export class ReactiveFormPageModule {}
